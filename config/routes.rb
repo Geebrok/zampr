@@ -1,13 +1,25 @@
 Zampr::Application.routes.draw do
-  resources :listings
 
+  get "help/index"
+  get "help/buy"
+  get "help/sell"
+  get "help/contact"
+  get "help/members"
+  get "help/community"
+  get "help/fees"
+  get "help/policies"
+  get "help/security"
+  devise_for :users
+  resources :listings
+# List of pages in order of creation
   get "pages/about"
   get "pages/contact"
+# You can have the root of your site routed with "root"
+  root 'listings#index'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'listings#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
