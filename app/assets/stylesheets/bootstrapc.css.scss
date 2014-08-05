@@ -4,9 +4,15 @@ $navbar-default-link-hover-color:	#f39c12;
 $navbar-default-brand-color:	#f39c12;
 $navbar-default-brand-hover-color:	#f39c12;
 
-
+//@import url(http://fonts.googleapis.com/css?family=Arimo);
 
 @import "bootstrap";
+
+body {
+  //background-image: image-url('blur.jpg'); // link to /assets/images/texture.png
+  background-repeat: no-repeat;
+	background-size: 100%;
+}
 
 body	{
 	background-color:	#f8f8f8;
@@ -25,4 +31,7 @@ body	{
 .orange	{
 	color:	#f39c12;
 	padding-top: 5px;
+}
+.center	{
+	text-align:	center;
 }
