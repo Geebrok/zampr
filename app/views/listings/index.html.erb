@@ -1,7 +1,66 @@
-<div class="container">
+<div class="jumbotron">
+  <h1>place message here!</h1><br>
+  <h1></h1><br>
+</div>
+<br />
+<h3 class="col-md-offset-1 orange">Discover awesome gift hampers that everyone will love</h3><br />
+  <div class="col-md-offset-2">
+    <h4>Featured</h4><br />
+  </div>
+
+<div class="row col-md-offset-2">
+  <% @listings.each do |listing| %>
+    <div class="col-md-3">
+      <div class="thumbnail">  
+        <%= image_tag listing.image.url %>
+          <div class="caption">
+            <h3><%= listing.name %></h3>
+            <h6><%= listing.description %></h6>
+            <p><%= number_to_currency(listing.price) %></p><br>
+            <%= link_to 'Show', listing, class: "btn btn-link" %>
+            <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
+            <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class="col-md-offset-8">
+  <h6>Find more features gifts here</h6>
+</div>
+<hr>
+
+<div><br />
+  <h3 class="col-md-offset-1 orange">Staff picks</h3><br />
+  <div class="col-md-offset-2">
+  <h3>This week staff picked the bes tvalue for money</h3><br />
+</div>
+
+<div class="row">
+  <% @listings.each do |listing| %>
+    <div class="col-md-3">
+      <div class="thumbnail">  
+        <%= image_tag listing.image.url %>
+          <div class="caption">
+            <h3><%= listing.name %></h3><br>
+            <p><%= number_to_currency(listing.price) %></p><br>
+            <%= link_to 'Show', listing, class: "btn btn-link" %>
+            <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
+            <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+          </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<hr>
+<div>
+  <h2>Popular this week</h2><br ?>
+</div>
+
+<div class="container-fluid">
   <div class="row">
     <% @listings.each do |listing| %>
-      <div class="col-md-3">
+      <div class="col-md-3">      
         <div class="thumbnail">  
           <%= image_tag listing.image.url %>
             <div class="caption">
