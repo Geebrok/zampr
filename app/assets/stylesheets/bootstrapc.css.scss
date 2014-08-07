@@ -1,5 +1,5 @@
 $navbar-border-radius:	none;
-$navbar-default-bg:	#f8f8f8;
+$navbar-default-bg:	#1abc9c;
 $navbar-default-link-hover-color:	#f39c12;
 $navbar-default-brand-color:	#f39c12;
 $navbar-default-brand-hover-color:	#f39c12;
@@ -18,18 +18,17 @@ body	{
 	background-color:	#f8f8f8;
 }
 
-.thumbnail img {
-  height-fixed:150px;
-  width:100px;
+.footer {
+  background-color: #7f8c8d;
+  color: #ffffff;
+  height:200px;
 }
 
-
-.jumbotron  {
-  //background-image: image-url('blur.jpg');
-  width:  100%;
-  margin: 0, 0, 0 20;
-  height: 300px;
-
+.thumbnail {
+  max-height: 500px;
+  min-height: 500px;
+ // max-width: 225px;
+ // min-width: 225px;
 }
 
 .col-md-3:nth-child(3n+1) {
