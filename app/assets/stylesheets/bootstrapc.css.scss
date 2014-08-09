@@ -1,5 +1,5 @@
 $navbar-border-radius:	none;
-$navbar-default-bg:	#1abc9c;
+$navbar-default-bg:	#f5f5f1;
 $navbar-default-link-hover-color:	#f39c12;
 $navbar-default-brand-color:	#f39c12;
 $navbar-default-brand-hover-color:	#f39c12;
@@ -18,16 +18,25 @@ body	{
 	background-color:	#f8f8f8;
 }
 
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0; }
+
+.navbar  {
+  height: 60px;
+}
+
+
 .footer {
-  background-color: #7f8c8d;
+  background-color: #253341;
   color: #ffffff;
   height:200px;
 }
 
 .thumbnail {
-  max-height: 500px;
-  min-height: 500px;
- // max-width: 225px;
+  max-height: 400px;
+  min-height: 400px;
+  max-width: 250px;
  // min-width: 225px;
 }
 
@@ -40,6 +49,11 @@ body	{
   h4 {font-size: 25px;}
   p {font-size: 18px;}
 }
+
+.col-md-4
+  h2 {font-size: 60px;}
+  h4 {font-size: 25px;}
+  p {font-size: 18px;}
 
 .orange	{
 	color:	#f39c12;
