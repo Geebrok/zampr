@@ -34,10 +34,18 @@ hr { display: block; height: 1px;
 }
 
 .thumbnail {
-  max-height: 400px;
-  min-height: 400px;
-  max-width: 250px;
+ // max-height: 400px;
+ // min-height: 400px;
+ // max-width: 250px;
  // min-width: 225px;
+}
+
+.caption  {
+  h3 {font-size:20px;
+      color:#f39c12;
+      text-align: center;}
+  p  {font-size:15px;
+      text-align: center;}
 }
 
 .col-md-3:nth-child(3n+1) {

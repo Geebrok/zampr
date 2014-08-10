@@ -1,8 +1,5 @@
 <div class="jumbotron">
   <h1>Discover unique gifts for the people you love</h1><br><br>
-    <div class="btn btn-success">
-      <h3><%= link_to "Find out more", new_listing_path %></h3>
-    </div>
 </div><br />
 
       <div class="col-md-offset-2">
@@ -15,11 +12,13 @@
             <div class="thumbnail">  
               <%= image_tag listing.image.url %>
                 <div class="caption">
-                  <h3><%= listing.name %></h3>           
-                  <%= number_to_currency(listing.price) %><br>
+                  <h3><%= listing.name %></h3>
+                  <p><%= number_to_currency(listing.price) %></p>
+                  
                   <%= link_to 'Show', listing, class: "btn btn-link" %>
                   <%= link_to 'Edit', edit_listing_path(listing), class: "btn btn-link" %>
                   <%= link_to 'Destroy', listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <h6><%= listing.user.name %></h6>
                 </div>
             </div>
           </div>
