@@ -10,8 +10,12 @@
 			<h3><%= @listing.name %></h3>
 			<h4><%= number_to_currency(@listing.price) %></h4>
 			<p><%= @listing.description %></p>
-				<%= link_to 'Edit', edit_listing_path(@listing) %> |
-				<%= link_to 'Back', listings_path %>
+			<%= link_to 'Back', listings_path %>
+			<% if current_user == @listing.user %>
+			| <%= link_to 'Edit', edit_listing_path(@listing) %>
+			|	<%= link_to 'Destroy', @listing, method: :delete, data: { confirm: 'Are you sure?' } %>
+			<% end %>
+				
 		</div>
 	</div>
 </div>
