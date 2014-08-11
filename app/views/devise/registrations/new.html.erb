@@ -3,10 +3,10 @@
 
       <h3 class="center">Sign up as individual</h2><hr>
 
-          <div class="form-group">
+          
             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
               <%= devise_error_messages! %>
-          </div>
+          
 
             	<div class="form-group">
                 <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Name" %>
