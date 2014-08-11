@@ -14,8 +14,10 @@ Zampr::Application.routes.draw do
 # List of pages in order of creation
   get "pages/about"
   get "pages/contact"
+  get 'seller'  =>  "listings#seller"
 # You can have the root of your site routed with "root"
   root 'listings#index'
+  
 
 
   # The priority is based upon order of creation: first created -> highest priority.

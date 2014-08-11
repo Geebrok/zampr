@@ -35,12 +35,12 @@
         <div class="row">
           <div class="col-md-6 col-md-offset-3">
               <div>
-                <%= f.submit "Update", class: "btn btn-primary btn btn-block" %>
+                <%= f.submit "Update My Account", class: "btn btn-primary btn btn-block" %>
               </div>
               <br>
             <% end %>
               <div>
-              <%= button_to "Cancel", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default btn btn-block" %><br>
+              <%= button_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-default btn btn-block" %><br>
               </div>
           </div>
         </div>
