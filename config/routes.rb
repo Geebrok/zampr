@@ -9,13 +9,17 @@ Zampr::Application.routes.draw do
   get "help/fees"
   get "help/policies"
   get "help/security"
+
   devise_for :users
   resources :listings
+
 # List of pages in order of creation
   get "pages/about"
   get "pages/contact"
   get 'seller'  =>  "listings#seller"
+
 # You can have the root of your site routed with "root"
+
   root 'listings#index'
   
 

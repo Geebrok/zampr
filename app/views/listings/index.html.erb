@@ -1,81 +1,27 @@
-<div class="jumbotron">
-  <h1>Discover unique gifts for the people you love</h1><br><br>
-</div><br />
+<div class="col-md-offset-2">
+  <h3>Featured</h3><br />
+</div>
 
-      <div class="col-md-offset-2">
-        <h3>Featured</h3><br />
-      </div>
-
-      <div class="row col-md-offset-2">
-        <% @listings.each do |listing| %>
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <%= link_to image_tag(listing.image.url), listing %>
-                <div class="caption">
-                  <h3><%= listing.name %></h3>
-                  <p><%= number_to_currency(listing.price) %></p>
-                  <h6><%= "Sold by #{listing.user.name}" %></h6>                
-                </div>
+  <div class="row col-md-offset-2">
+    <% @listings.each do |listing| %>
+      <div class="col-md-3">
+        <div class="thumbnail">
+          <%= link_to image_tag(listing.image.url), listing %>
+            <div class="caption">
+              <h3><%= listing.name %></h3>
+              <p><%= number_to_currency(listing.price) %></p>
+              <h6><%= "Sold by #{listing.user.name}" %></h6>                
             </div>
-          </div>
-        <% end %>
+        </div>
       </div>
+    <% end %>
+  </div>
 
 <div class="col-md-offset-10">
   <h6>Find more featured gifts here</h6>
 </div>
-<hr>
 
-      <div class="col-md-offset-2">
-        <h3>Staff Favorites</h3><br />
-      </div>
-
-      <div class="row col-md-offset-2">
-        <% @listings.each do |listing| %>
-          <div class="col-md-3">
-            <div class="thumbnail">  
-              <%= link_to image_tag(listing.image.url), listing %>
-                <div class="caption">
-                  <h3><%= listing.name %></h3>
-                  <p><%= number_to_currency(listing.price) %></p>
-                  <h6><%= "Sold by #{listing.user.name}" %></h6> 
-                </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-<div class="col-md-offset-10">
-  <h6>See more staff favorites here</h6>
-</div>
-<hr>
-
-<div class="col-md-offset-2">
-  <h3>Popular this week</h3><br />
-</div>
-
-
-      <div class="row col-md-offset-2">
-        <% @listings.each do |listing| %>
-          <div class="col-md-3">
-            <div class="thumbnail">  
-              <%= link_to image_tag(listing.image.url), listing %>
-                <div class="caption">
-                  <h3><%= listing.name %></h3>
-                  <p><%= number_to_currency(listing.price) %></p>
-                  <h6><%= "Sold by #{listing.user.name}" %></h6> 
-                </div>
-            </div>
-          </div>
-        <% end %>
-      </div>
-
-<div class="col-md-offset-10">
-  <h6>More of this weeks Most Popular</h6>
-</div>
-<hr>
-
-<br>
+<hr>     
 
 <% if user_signed_in? %>
     <%= link_to 'New Listing', new_listing_path %>
