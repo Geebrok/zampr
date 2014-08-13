@@ -10,23 +10,19 @@ $navbar-default-brand-hover-color:	#f39c12;
 
 body {
   //background-image: image-url('blur.jpg'); // link to /assets/images/texture.png
-  background-repeat: no-repeat;
-	background-size: 100%;
+  //background-repeat: no-repeat;
+	//background-size: 100%;
 }
 
 body	{
-	background-color:	#f8f8f8;
+	//background-color:	#f8f8f8;
+  background-color: #fff;
 }
 
 hr {
   display: block; height: 1px;
   border: 0; border-top: 1px solid #ccc;
   margin: 1em 0; padding: 0;
-}
-
-th {
-  margin:0px;
-  padding:0px;
 }
 
 .navbar  {
@@ -52,8 +48,13 @@ th {
       text-align: center;}
 }
 
-.col-md-3:nth-child(4n+1) {
+.col-md-2:nth-child(6n+1) {
   clear: left;
+}
+
+.menu {
+  font-size: 14px;
+  text-decoration:none;
 }
 
 .col-md-6 {
